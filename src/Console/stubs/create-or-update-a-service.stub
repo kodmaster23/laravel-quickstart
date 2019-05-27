@@ -1,0 +1,38 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
+use DummyNamespacedRepository;
+
+class DummyClass
+{
+
+    CONST VALIDATION_CREATE = [
+    ];
+    CONST VALIDATION_EDIT = [
+    ];
+
+    public function __construct(
+        DummyRepository $dummyRepository
+    )
+    {
+        $this->dummyRepository = $dummyRepository;
+    }
+
+
+    public function storeOrUpdate(array $input, int $id = null)
+    {
+
+        $validator = Validator::make($input, $id ? self::VALIDATION_EDIT : self::VALIDATION_CREATE);
+        if ($validator->fails()) {
+            throw new ValidationException($validator);
+        }
+
+        return $this->dummyRepository->storeOrUpdate($input, $id);
+    }
+}
+
+
+

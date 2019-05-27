@@ -1,0 +1,31 @@
+{
+    "name": "kodmaster23/laravel-quickstart",
+    "description": "Simple boilerplate classes and artisan commands to quickstart a project",
+    "require": {
+        "php": ">=7.3.4",
+        "illuminate/support": "^5.8",
+        "illuminate/database": "^5.8",
+        "illuminate/http": "^5.8",
+        "illuminate/validation": "^5.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thiago Traczykowski",
+            "email": "thiagotraczykowski@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kodmaster23\\LaravelQuickStart\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kodmaster23\\LaravelQuickStart\\LaravelQuickStartServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

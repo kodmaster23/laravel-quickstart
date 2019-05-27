@@ -1,0 +1,43 @@
+<?php
+/**
+ * Created for Schaffen IT.
+ * User: Thiago Traczykowski
+ */
+
+namespace App\Domain\Audit\Repositories;
+
+
+use DummyNamespacedRepository;
+use Kodmaster23\LaravelQuickStart\Repositories\EloquentPostgresRepository;
+use DummyNamespacedModel;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Lang;
+
+class DummyClass extends EloquentPostgresRepository implements DummyRepository
+{
+    protected $model = DummyModel::class;
+
+    
+
+    public function throwException($id)
+    {
+        throw new ModelNotFoundException(Lang::get('exceptions.placeholder', ['name' => "$id"]), 404);
+    }
+    
+
+    public function applyCustomFilters(){
+//        $active = null;
+
+        extract($this->filters);
+
+//        $this->query->when($active, function ($query) use ($active) {
+//            if ($active === 'true') {
+//                $query->whereNull("date_time_end");
+//            } else {
+//                $query->whereNotNull("date_time_end");
+//            }
+//            return $query;
+//        });
+
+    }
+}

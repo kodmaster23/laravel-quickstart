@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Domain\Audit\Services;
+
+
+use DummyNamespacedRepository;
+
+class DestroyAParkingFiscalPeriod
+{
+    private $dummyRepository;
+
+    public function __construct(
+        DummyRepository $dummyRepository
+    )
+    {
+        $this->dummyRepository = $dummyRepository;
+    }
+
+    public function destroy(int $id)
+    {
+        return $this->dummyRepository->destroy($id);
+    }
+}

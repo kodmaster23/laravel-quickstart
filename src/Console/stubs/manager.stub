@@ -1,0 +1,39 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyCreateOrUpdateAService;
+use DummyDestroyAAService;
+
+class DummyClass
+{
+
+    /**
+     * @var DummyCreateOrUpdateAService
+     */
+    private $dummyCreateOrUpdateAService;
+    /**
+     * @var DummyDestroyAAService
+     */
+    private $dummyDestroyAAService;
+
+
+    public function __construct(
+        DummyCreateOrUpdateAService $dummyCreateOrUpdateAService,
+        DummyDestroyAAService $dummyDestroyAAService
+    )
+    {
+        $this->dummyCreateOrUpdateAService = $dummyCreateOrUpdateAService;
+        $this->dummyDestroyAAService = $dummyDestroyAAService;
+    }
+
+    public function storeOrUpdate(array $input, $id = null){
+        return $this->dummyCreateOrUpdateAService->storeOrUpdate($input, $id);
+    }
+
+    public function destroy($id){
+        return $this->dummyDestroyAAService->destroy($id);
+    }
+
+
+}
