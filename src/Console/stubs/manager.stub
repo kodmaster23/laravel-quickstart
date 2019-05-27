@@ -1,38 +1,40 @@
 <?php
 
-namespace DummyNamespace;
+namespace $_NAMESPACE_$;
 
-use DummyCreateOrUpdateAService;
-use DummyDestroyAAService;
+use Kodmaster23\LaravelQuickStart\Interfaces\Manager;
 
-class DummyClass
+use $_SERVICE_NAMESPACE_$\$_CREATE_OR_UPDATE_A_SERVICE_$;
+use $_SERVICE_NAMESPACE_$\$_DESTROY_A_SERVICE_$;
+
+class $_CLASS_$ implements Manager
 {
 
     /**
-     * @var DummyCreateOrUpdateAService
+     * @var $_CREATE_OR_UPDATE_A_SERVICE_$
      */
-    private $dummyCreateOrUpdateAService;
+    private $$_CREATE_OR_UPDATE_A_SERVICE_VARIABLE_$;
     /**
-     * @var DummyDestroyAAService
+     * @var $_DESTROY_A_SERVICE_$
      */
-    private $dummyDestroyAAService;
+    private $$_DESTROY_A_SERVICE_VARIABLE_$;
 
 
     public function __construct(
-        DummyCreateOrUpdateAService $dummyCreateOrUpdateAService,
-        DummyDestroyAAService $dummyDestroyAAService
+        $_CREATE_OR_UPDATE_A_SERVICE_$ $$_CREATE_OR_UPDATE_A_SERVICE_VARIABLE_$,
+        $_DESTROY_A_SERVICE_$ $$_DESTROY_A_SERVICE_VARIABLE_$
     )
     {
-        $this->dummyCreateOrUpdateAService = $dummyCreateOrUpdateAService;
-        $this->dummyDestroyAAService = $dummyDestroyAAService;
+        $this->$_CREATE_OR_UPDATE_A_SERVICE_$ = $$_CREATE_OR_UPDATE_A_SERVICE_VARIABLE_$;
+        $this->$_DESTROY_A_SERVICE_VARIABLE_$ = $$_DESTROY_A_SERVICE_VARIABLE_$;
     }
 
     public function storeOrUpdate(array $input, $id = null){
-        return $this->dummyCreateOrUpdateAService->storeOrUpdate($input, $id);
+        return $this->$_CREATE_OR_UPDATE_A_SERVICE_VARIABLE_$->storeOrUpdate($input, $id);
     }
 
     public function destroy($id){
-        return $this->dummyDestroyAAService->destroy($id);
+        return $this->$_DESTROY_A_SERVICE_VARIABLE_$->destroy($id);
     }
 
 

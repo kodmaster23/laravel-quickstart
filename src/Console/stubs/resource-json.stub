@@ -1,10 +1,10 @@
 <?php
 
-namespace DummyNamespace;
+namespace $_NAMESPACE_$;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class DummyClass extends JsonResource
+class $_CLASS_$ extends JsonResource
 {
 
     public function toArray($request)

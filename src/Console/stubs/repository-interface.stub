@@ -1,9 +1,9 @@
 <?php
 
-namespace DummyNamespace;
+namespace $_NAMESPACE_$;
 
 
-interface DummyClass
+interface $_INTERFACE_$
 {
 
 }

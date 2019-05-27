@@ -1,0 +1,21 @@
+<?php
+
+namespace $_NAMESPACE_$;
+
+use Kodmaster23\LaravelQuickStart\Controllers\BaseController;
+
+use $_RESOURCE_NAMESPACE_$\$_RESOURCE_CLASS_$;
+use $_REPOSITORY_NAMESPACE_$\$_REPOSITORY_CLASS_$;
+use $_MANAGER_NAMESPACE_$\$_MANAGER_CLASS_$;
+
+class $_CLASS_$ extends BaseController
+{
+    public $presenter = $_RESOURCE_CLASS_$::class;
+
+    public function __construct($_REPOSITORY_CLASS_$ $repository, $_MANAGER_CLASS_$ $manager)
+    {
+        $this->repository = $repository;
+        $this->manager = $manager;
+    }
+
+}

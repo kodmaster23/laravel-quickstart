@@ -1,0 +1,5 @@
+<?php
+
+Route::group(["prefix" => "$_DOMAIN_$"], function () {
+    Route::resource("$_ENTITY_$", "$_ENTITY_CONTROLLER_$");
+});

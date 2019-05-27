@@ -1,12 +1,12 @@
 <?php
 
-namespace DummyNamespace;
+namespace $_NAMESPACE_$;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
-use DummyNamespacedRepository;
+use $_REPOSITORY_NAMESPACE_$\$_REPOSITORY_CLASS_$;
 
-class DummyClass
+class $_CLASS_$
 {
 
     CONST VALIDATION_CREATE = [
@@ -15,10 +15,10 @@ class DummyClass
     ];
 
     public function __construct(
-        DummyRepository $dummyRepository
+         $_REPOSITORY_CLASS_$ $$_REPOSITORY_VARIABLE_$
     )
     {
-        $this->dummyRepository = $dummyRepository;
+         $this->$_REPOSITORY_VARIABLE_$ = $_REPOSITORY_VARIABLE_$;
     }
 
 
@@ -30,7 +30,7 @@ class DummyClass
             throw new ValidationException($validator);
         }
 
-        return $this->dummyRepository->storeOrUpdate($input, $id);
+        return $this->$_REPOSITORY_VARIABLE_$->storeOrUpdate($input, $id);
     }
 }
 

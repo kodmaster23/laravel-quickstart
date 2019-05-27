@@ -6,7 +6,8 @@
         "illuminate/support": "^5.8",
         "illuminate/database": "^5.8",
         "illuminate/http": "^5.8",
-        "illuminate/validation": "^5.8"
+        "illuminate/validation": "^5.8",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "license": "MIT",
     "authors": [

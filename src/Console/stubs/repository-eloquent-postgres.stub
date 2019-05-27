@@ -1,29 +1,24 @@
 <?php
-/**
- * Created for Schaffen IT.
- * User: Thiago Traczykowski
- */
 
-namespace App\Domain\Audit\Repositories;
+namespace $_NAMESPACE_$;
 
 
-use DummyNamespacedRepository;
 use Kodmaster23\LaravelQuickStart\Repositories\EloquentPostgresRepository;
-use DummyNamespacedModel;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Lang;
 
-class DummyClass extends EloquentPostgresRepository implements DummyRepository
-{
-    protected $model = DummyModel::class;
+use $_REPOSITORY_NAMESPACE_$\$_REPOSITORY_CLASS_$;
+use $_MODEL_NAMESPACE_$\$_MODEL_CLASS_$;
 
-    
+class $_CLASS_$ extends EloquentPostgresRepository implements $_REPOSITORY_CLASS_$
+{
+    protected $model = $_MODEL_CLASS_$::class;
 
     public function throwException($id)
     {
         throw new ModelNotFoundException(Lang::get('exceptions.placeholder', ['name' => "$id"]), 404);
     }
-    
+
 
     public function applyCustomFilters(){
 //        $active = null;
